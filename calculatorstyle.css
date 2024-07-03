@@ -45,3 +45,36 @@
 .operator{
     color:aqua
 }
+.container {
+  max-width: 300px; /* Set a maximum width for the container */
+  margin: 40px auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 10px; /* Add a border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+.calculator {
+  display: grid; /* Use CSS grid to layout the calculator buttons */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  grid-gap: 10px; /* Add a gap between buttons */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 200px; /* Reduce the maximum width on smaller screens */
+  }
+  .calculator {
+    grid-template-columns: repeat(3, 1fr); /* Reduce the number of columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 150px; /* Reduce the maximum width on even smaller screens */
+  }
+  .calculator {
+    grid-template-columns: repeat(2, 1fr); /* Reduce the number of columns on even smaller screens */
+  }
+}
